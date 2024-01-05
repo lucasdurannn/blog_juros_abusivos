@@ -1,0 +1,19 @@
+<h1>Nova Postagem</h1>
+
+<%= form_with(model: @post, local: true) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit "Criar Postagem" %>
+  </div>
+<% end %>
+
+<p><%= link_to "Voltar para a lista de postagens", posts_path %></p>

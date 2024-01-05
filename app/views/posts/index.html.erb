@@ -1,0 +1,11 @@
+<h1>Lista de Postagens</h1>
+
+<% @posts.each do |post| %>
+  <div>
+    <h2><%= link_to post.title, post %></h2>
+    <p><%= truncate(post.body, length: 250) %></p>
+    <p><%= link_to "Ler mais", post %></p>
+  </div>
+<% end %>
+
+<p><%= link_to "Criar uma nova postagem", new_post_path %></p>
